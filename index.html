@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Responsive Landing Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Utile-Book';
+      src: url(./fonts/Utile-Book.ttf);
+    }
+
+    @font-face {
+      font-family: 'Utile-Medium';
+      src: url(./fonts/Utile-Medium.eot);
+    }
+
+    @font-face {
+      font-family: 'UtileDisplay-Medium';
+      src: url(./fonts/UtileDisplay-Book.ttf);
+    }
+
+    body {
+      font-family: 'Utile-Book', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    .main-container-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1440px;
+      max-height: 1440px;
+    }
+
+    .main-left, .main-right {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+    }
+
+    .main-left {
+      background-color: #e8e3dd;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .main-left img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .main-left p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      padding: 0 120px;
+    }
+
+    .main-left strong {
+      font-family: 'Utile-Medium';
+      display: block;
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+
+    .img-gal img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .main-right {
+      background-color: #374744;
+      color: white;
+      border-radius: 5px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .form_base {
+      max-width: 500px;
+      width: 100%;
+      padding: 80px;
+      background-color: white;
+      border-radius: 5px;
+      height: 750px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .py-2 {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: 'Utile-Book';
+      color: black;
+      margin-top: 20px;
+      margin-left: -18rem;
+    }
+
+    .name_label {
+      font-family: 'Utile-Book';
+    }
+
+    .form_head {
+      font-size: 44px;
+      font-family: 'UtileDisplay-Medium';
+      margin-bottom: 20px;
+      color: #333;
+      padding: 0 50px;
+      font-weight: 350;
+    }
+
+    .form_name, .form_email, .form_btn {
+      width: 100%;
+      height: 45px;
+      border-radius: 0.5rem;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      padding: 0 10px;
+      border: 2px solid #E5E1DA;
+    }
+
+    .form_btn {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .form_para {
+      font-size: 15px;
+ text-align: center;
+      font-weight: 350;
+      margin-top: 10px;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    .img-box {
+      padding: 50px;
+    }
+
+    .logo_img{
+
+        width: 100%;
+        max-width: 200px;
+    }
+    @media screen and (max-width: 767px) {
+
+        .img-box {
+    padding: 0px;
+}
+
+        .py-2 {
+   
+    margin-left: -12rem;
+}
+
+
+      .main-container-fluid {
+        flex-direction: column;
+        min-height: auto;
+        width: 100%;
+      }
+
+      .main-left, .main-right {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .form_base {
+        max-width: 90%;
+        padding: 20px;
+        height: auto;
+        margin: 30px;
+      }
+
+      .main-left img {
+        max-width: 150px;
+      }
+
+      .main-left p {
+        font-size: 1rem;
+        margin: 30px 0;
+        padding: 0px 10px;
+
+      }
+
+      .main-left strong {
+        font-size: 1.25rem;
+      }
+
+      .form_head {
+        font-size: 44px;
+        padding: 0 1rem;
+      }
+
+      .form_name, .form_email, .form_btn {
+        height: 40px;
+        font-size: 0.875rem;
+      }
+
+      .form_para {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="main-container-fluid">
+
+      
+        <div class="main-left">
+          <div>
+            <img class="logo_img" src="assets/images/a-noble-gift-emboss-logo.png" alt="Logo">
+            <p>Revolutionising the charity auction market. One-of-a-kind gifts and experiences, year-round opportunities and 100% of winning bid donated to charity.<strong>Coming Soon..</strong></p>
+          </div>
+          <div class="row img-box">
+            <div class="col-6"><img class="img-gal" src="assets/images/img-1.jpg" alt="Image 1"></div>
+            <div class="col-6"><img class="img-gal" src="assets/images/img-2.jpg" alt="Image 2"></div>
+            <div class="col-6"><img class="img-gal" src="assets/images/img-3.jpg" alt="Image 3"></div>
+            <div class="col-6"><img class="img-gal" src="assets/images/img-4.jpg" alt="Image 4"></div>
+          </div>
+        </div>
+      
+        <div class="main-right">
+          <div class="form_base">
+            <h2 class="form_head">Join the waiting list</h2>
+            <form action="/action_page.php">
+              <label class="py-2 name_label" for="fname">Name:</label><br>
+        <input class="form_name"  type="text" id="fname" name="fname"><br>
+        <label class="py-2" for="email">Email:</label><br>
+        <input class=" form_email"  type="text" id="email" name="email"><br><br>
+        <input class="form_btn"  type="submit" value="Register">
+            </form>
+            <p class="form_para">Reach out to us here: hello@anoblegift.com</p>
+          </div>
+        </div>
+
+
+
+      </div>
+
