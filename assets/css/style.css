@@ -30,6 +30,10 @@ body {
   max-width: 1440px;
 }
 
+.left-contain-box{
+
+  padding: 200px;
+}
 .main-left, .main-right {
   flex: 1 1 50%;
   display: flex;
