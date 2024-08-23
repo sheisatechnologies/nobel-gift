@@ -39,8 +39,8 @@
       flex-wrap: wrap;
       width: 100%;
       margin: 0 auto;
-      max-width: 1440px;
-      max-height: 1440px;
+      /* max-width: 1440px;
+      max-height: 1440px; */
     }
 
     .main-left {
@@ -84,7 +84,7 @@
       font-family: 'Utile-Medium';
       display: block;
       margin-top: 10px;
-      font-size: 1.5rem;
+      font-size: 19px;
     }
 
     .img-gal img {
@@ -150,10 +150,14 @@
       width: 100%;
       height: 45px;
       border-radius: 0.5rem;
-      margin-bottom: 20px;
+      
       font-size: 1rem;
       padding: 0 10px;
       border: 2px solid #E5E1DA;
+    }
+
+    .form_email{
+      margin-bottom: 40px;
     }
 
     .form_btn {
@@ -169,7 +173,7 @@
       font-weight: 350;
       margin-top: 10px;
       color: #333;
-      padding: 0 20px;
+      padding: 0 40px;
     }
 
     .img-box {
@@ -187,9 +191,22 @@
       max-width: 150px;
       max-height: 100px;
     }
+.main_logo{
 
+  max-width: 300px;
+}
   
+.form_para a{
+
+  text-decoration: none;
+  color: #000000;
+}
     @media screen and (max-width: 991px) {
+
+      .main_logo{
+
+max-width: 300px !important;
+}
 
       .main-left img {
         width: 100% !important;
@@ -272,7 +289,7 @@
 
           <div class="form_base_left">
             <div class="row d-flex justify-content-center">
-              <img class="logo_img" src="assets/images/a-noble-gift-emboss-logo.png" alt="Logo">
+              <img class="logo_img main_logo" src="assets/images/a-noble-gift-emboss-logo.png" alt="Logo">
             </div>
             <div class="row">
               <p>Revolutionising the charity auction market. One-of-a-kind gifts and experiences, year-round opportunities and 100% of winning bid donated to charity.<strong>Coming Soon..</strong></p>
@@ -302,15 +319,25 @@
         <div class="main-right">
           <div class="form_base">
             <h2 class="form_head">Join the waiting list</h2>
-            <form action="/action_page.php">
+
+            
+
+
+          <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255C18D218CBC9BE3529AE50C2A9AD7CFCEAB22B0488FA2316D49A04A2003397A0E571D534DA59CA481989A7B5DC2CC55476">
+            
               <label class="py-2 name_label" for="fname">Name:</label><br>
-        <input class="form_name"  type="text" id="fname" name="fname"><br>
+              <input class="form_name" aria-label="Name" id="fieldName" maxlength="200" name="cm-name" class="form-control" placeholder="Name">
+                
+       
         <label class="py-2" for="email">Email:</label><br>
-        <input class=" form_email"  type="text" id="email" name="email"><br><br>
+        <input class=" form_email"  autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-tyvulu-tyvulu" required="" type="email" placeholder="Email">
+       
         <input class="form_btn"  type="submit" value="Register">
             </form>
             <p class="form_para">Reach out to us here: <a href="mailto:hello@anoblegift.com">hello@anoblegift.com</a></p>
           </div>
+
+          <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
         </div>
 
 
