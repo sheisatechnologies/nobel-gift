@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>A Noble Gift</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Revolutionising the charity auction market. One-of-a-kind gifts and experiences, year-round opportunities and 100% of winning bid donated to charity.">
+  <link rel="icon" type="image/x-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: 'Utile-Book';
+      src: url(./fonts/Utile-Book.ttf);
+    }
+
+    @font-face {
+      font-family: 'Utile-Medium';
+      src: url(./fonts/Utile-Medium.eot);
+    }
+
+    @font-face {
+      font-family: 'UtileDisplay-Medium';
+      src: url(./fonts/UtileDisplay-Book.ttf);
+    }
+
+    body {
+      font-family: 'Utile-Book', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    .main-container-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .main-left {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+      background-color: #e8e3dd;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .main-left img {
+      width: 261px !important;
+      height: 191px !important;
+      margin-bottom: 20px;
+    }
+
+    .main-left p {
+      font-size: 19px;
+      margin-bottom: 20px;
+      line-height: 24px;
+      padding-bottom: 10px;
+    }
+
+    .main-left strong {
+      font-family: 'Utile-Medium';
+      display: block;
+      margin-top: 10px;
+      font-size: 19px;
+    }
+
+    .img-gal img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .main-right {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+      background-color: #374744;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    form {
+      padding: 0;
+      margin: 0;
+    }
+
+    .form_base {
+      max-width: 500px;
+      width: 100%;
+      padding: 50px;
+      background-color: white;
+      border-radius: 5px;
+      height: auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form_base_left {
+      max-width: 500px;
+      width: 100%;
+      padding: 80px;
+      border-radius: 5px;
+      height: auto;
+    }
+
+    .py-2 {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: 'Utile-Book';
+      color: black;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      display: block; /* Ensures labels are block level */
+      text-align: left; /* Align text to the left */
+    }
+
+    .name_label, .form_head {
+      font-family: 'Utile-Book';
+    }
+
+    .form_head {
+      font-size: 44px;
+      font-family: 'UtileDisplay-Medium';
+      margin-bottom: 20px;
+      color: #333;
+      padding: 0;
+      font-weight: 350;
+    }
+
+    .form_name, .form_email, .form_btn {
+      width: 100%;
+      height: 45px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      padding: 0 10px;
+      border: 2px solid #E5E1DA;
+      box-sizing: border-box;
+      margin-bottom: 20px; /* Add margin between input fields */
+    }
+
+    .form_btn {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    .form_para {
+      font-size: 15px;
+      text-align: center;
+      font-weight: 350;
+      margin-top: 10px;
+      color: #333;
+      padding: 0;
+    }
+
+    .form_para a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .img-box {
+      padding: 50px;
+    }
+
+    .logo_img {
+      width: 261px !important;
+      height: 191px !important;
+    }
+
+    .img-gal {
+      width: 100%;
+      height: auto;
+      max-width: 150px;
+      max-height: 100px;
+    }
+
+    .main_logo {
+      max-width: 300px !important;
+      max-height: 300px !important;
+    }
+
+    @media screen and (max-width: 991px) {
+      .main_logo {
+        max-width: 300px !important;
+      }
+
+      .main-left img {
+        width: 100% !important;
+        max-width: 300px;
+        max-height: 100%;
+      }
+
+      .img-box {
+        padding: 0;
+      }
+
+      .py-2 {
+        margin-left: 0;
+      }
+
+      .main-container-fluid {
+        min-height: auto;
+        width: 100%;
+      }
+
+      .main-left, .main-right {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .form_base {
+        max-width: 90%;
+        padding: 20px;
+        height: auto;
+        margin: 30px auto;
+      }
+
+      .form_base_left {
+        max-width: 90%;
+        padding: 20px;
+        height: auto;
+        margin: 30px auto;
+      }
+
+      .main-left p {
+        font-size: 1rem;
+        margin: 30px 0;
+        padding: 0;
+      }
+
+      .main-left strong {
+        font-size: 1.25rem;
+      }
+
+      .form_head {
+        font-size: 36px;
+        padding: 0 1rem;
+      }
+
+      .form_name, .form_email, .form_btn {
+        height: 40px;
+        font-size: 0.875rem;
+      }
+
+      .form_para {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-container-fluid">
+
+  <div class="main-left">
+
+    <div class="form_base_left">
+      <div class="row d-flex justify-content-center">
+        <img class="logo_img main_logo" src="assets/images/a-noble-gift-emboss-logo.png" alt="A Noble Gift">
+      </div>
+      <div class="row">
+        <p>Revolutionising the charity auction market. One-of-a-kind gifts and experiences, year-round opportunities and 100% of winning bid donated to charity.<strong>Coming Soon..</strong></p>
+      </div>
+      <div class="row">
+        <div class="col-md-6"><img class="img-gal" src="assets/images/Picture1.jpg" alt="Image 1"></div>
+        <div class="col-md-6"><img class="img-gal" src="assets/images/Picture2.jpg" alt="Image 2"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6"><img class="img-gal" src="assets/images/picture3.jpg" alt="Image 3"></div>
+        <div class="col-md-6"><img class="img-gal" src="assets/images/Picture4.jpg" alt="Image 4"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-right">
+    <div class="form_base">
+      <h2 class="form_head">Join the waiting list</h2>
+      <form class="js-cm-form" id="subForm" 
+            action="https://www.createsend.com/t/subscribeerror?description=" 
+            method="post" 
+            data-id="A61C50BEC994754B1D79C5819EC1255C18D218CBC9BE3529AE50C2A9AD7CFCEAB22B0488FA2316D49A04A2003397A0E571D534DA59CA481989A7B5DC2CC55476">
+
+        <label class="py-2" for="fieldName">Name:</label>
+        <input class="form_name" aria-label="Name" id="fieldName" maxlength="200" name="cm-name" placeholder="Name" required>
+
+        <label class="py-2" for="fieldEmail">Email:</label>
+        <input class="form_email" autocomplete="email" aria-label="Email" id="fieldEmail" maxlength="200" name="cm-tyvulu-tyvulu" required type="email" placeholder="Email">
+
+        <input class="form_btn" type="submit" value="Register">
+      </form>
+      <p class="form_para">
+        Reach out to us here: 
+        <a href="mailto:hello@anoblegift.com">hello@anoblegift.com</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Ensure this script is necessary and correctly integrated -->
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+
+</body>
+</html>
