@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Floorplans - Brettenham House</title>
+    <meta name="description" content="Brettenham House’s location embodies the spirit of the building, a seamless blend of fascinating heritage with the very best in modern culture and offering a space where great things can be achieved.">
+    <meta name="author" content="Other Alias">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#FFFFFF"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.css?v=1.0.0" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.0.0" rel="stylesheet">
+    <link href="assets/css/media.css?v=1.0.0" rel="stylesheet">
+    <link href="assets/images/favicon.png" rel="shortcut icon">
+    <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Open Graph -->
+    <meta property='og:title' content='Brettenham House' />
+    <meta property='og:description' content='120,000 SQ FT OF CRAFTED WORKSPACE. OUTSTANDING DESIGN MEETS NATURAL BEAUTY. PANORAMIC VIEWS ACROSS THE RIVER. ICONIC RIVERSIDE LOCATION. AVAILABLE Q1 2026' />
+    <meta property='og:type' content='website' />
+    <meta property='og:image' content='https://www.brettenhamhouse.com/assets/images/share.jpg' />
+    <!-- Twitter Card -->
+    <meta property='twitter:title' content='Brettenham House' />
+    <meta property='twitter:card' content='summary' />
+    <meta property='twitter:description' content='120,000 SQ FT OF CRAFTED WORKSPACE. OUTSTANDING DESIGN MEETS NATURAL BEAUTY. PANORAMIC VIEWS ACROSS THE RIVER. ICONIC RIVERSIDE LOCATION. AVAILABLE Q1 2026' />
+    <meta property='twitter:image' content='https://www.brettenhamhouse.com/assets/images/share.jpg' />
+
+    <!-- Google tag (gtag.js) -->
+<style>
+
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #dataTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #ECF5F5;
+}
+
+.level-column,
+.level-head {
+    border-bottom: 1px solid black; /* Only show bottom border */
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.total-column {
+    border-bottom: none;
+}
+
+th {
+    font-weight: bold;
+}
+
+.clicked {
+    background-color: #BDE2DF; /* Light green background for selected cells */
+    outline: 3px solid black; /* Use outline instead of border */
+    outline-offset: -3px; /* Ensures outline looks like a border */
+    box-sizing: border-box; /* Ensure the cell size doesn't change */
+}
+
+.sum-row {
+    font-weight: bold;
+}
+
+.level-column {
+    font-weight: bold;
+    cursor: default;
+}
+
+/* Change table row color on hover */
+#dataTable tbody tr:hover {
+    background-color: #168771; /* Light gray color for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+        
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container, .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .col-lg-10, .col-lg-12, .col-lg-3, .col-lg-9, .col-lg-1 {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    h1.rotate {
+        transform: rotate(0deg);
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    p, td {
+        font-size: 14px;
+        text-align: center;
+    }
+    #dataTable {
+        width: 100%;
+        font-size: 12px;
+    }
+    /* Adjusting button sizes for mobile */
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    /* Hide non-essential large images on mobile */
+    .d-none.d-lg-block {
+        display: none !important;
+    }
+}
+
+</style>
+
+<style>
+
+/* BRETTENHAM HOUSE
+/* OTHER ALIAS LTD
+/* ---------------------------------------------- */
+
+/* ---------------------------------------------- */
+/* VARIABLES
+/* ---------------------------------------------- */
+:root {
+    --blue: #0048C6;
+    --teal: #62BCB3;
+    --green: #168771;
+    --orange: #FF4602;
+    --mustard: #FF9222;
+    --black: #000000;
+    --white: #FFFFFF;
+    --off-black: #333333;
+    --grey: #B6B6B6FF;
+    --light-grey: #ECF5F5;
+    --ziggurat: #BDE2DF;
+    --breaker-bay: #6CA6A2;
+    --edgewater: #CAE2E0;
+}
+
+/* ---------------------------------------------- */
+/* @FONT-FACE
+/* ---------------------------------------------- */
+
+@font-face {
+    font-family: 'Altform-Regular';
+    src: url('../fonts/Altform-Regular.woff2') format('woff2'),
+    url('../fonts/Altform-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Altform-Bold';
+    src: url('../fonts/Altform-Bold.woff2') format('woff2'),
+    url('../fonts/Altform-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.bg-location{
+    background-color: var(--mustard) !important;
+}
+
+.bg-download{
+    background-color: var(--green) !important;
+}
+
+.bg-floorplan{
+    background-color: var(--teal) !important;
+}
+
+.bg-contact{
+    background-color: var(--blue) !important;
+}
+
+
+
+
+
+
+/* universal header code */
+
+#fixedLogo{
+    display: none;
+}
+
+/* universal header code */
+
+
+
+
+
+
+
+
+
+/* index  custom slide slick */
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 50px;
+    margin: 4px;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 59px;
+    height: 5px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+   background-color: var(--white);
+}
+
+.slick-dots li button {
+    display: none;
+}
+
+.slick-dots li:hover{
+    background-color: var(--orange);
+}
+
+/* index  custom slide slick */
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    .mask-container {
+        position: relative;
+        width: 100%;
+        height:75vh;
+        overflow: hidden;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+/* image revel css for all hero section*/
+       /* Mask container styling */
+       .mask-container {
+        position: relative;
+        width: 100%; /* Set a larger width for the mask container */
+        height: 700px; /* Set a larger height for the mask container */
+        overflow: hidden; /* Ensure that the wrapper content stays hidden initially */
+        background-color: transparent; /* Transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Wrapper element styling */
+    .wrapper-buil {
+        width: 100%; /* Width of the image container */
+        height: auto; /* Height of the image container */
+        background-color: red;
+        position: absolute;
+        padding: 40px; /* Add padding around the image */
+        box-sizing: border-box; /* Include padding in width and height calculations */
+        transform-origin: left; /* Set the origin to the left for the scaling effect */
+        transform: scaleX(0); /* Start with zero width (completely hidden) */
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    /* Image reveal div that covers the image */
+    .image-reveal-buil {
+        position: absolute;
+        top: -20px; /* Position the red container above the wrapper */
+        left: -20px; /* Position the red container to the left of the wrapper */
+        width: 100%; /* Width of the red container should be larger than the wrapper */
+        height: 100%; /* Height of the red container should be larger than the wrapper */
+        background: red;
+        transform-origin: left;
+        transform: scaleX(1); /* Start fully covering the image */
+        z-index: 2;
+    }
+
+    /* Image styling */
+    .wrapper-buil img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+/* image revel css for all hero section*/
+
+
+@media (max-width: 991px) {
+    .mask-container {
+        position: relative;
+        width: 100%;
+        height:75vh !important;
+        overflow: hidden;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* all red container revel animation */
+     .image-wrapper-ma {
+        position: relative;
+        overflow: hidden;
+        width: 800px; /* Increased width */
+        height: 500px; /* Increased height */
+        flex-shrink: 0;
+        padding: 20px;
+        background-color: red;
+    }
+
+    /* Red container to cover the image */
+    .image-reveal-ma {
+        position: absolute;
+        top: 0;
+        right: 0; /* Positioned on the right */
+        width: 100%;
+        height: 100%;
+        background: red; /* Red reveal container */
+        transform: translateX(0); /* Start fully covering the image */
+        z-index: 1; /* Ensure it is on top of the image */
+    }
+
+    /* Image styling */
+    .image-wrapper-ma img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Paragraph styling */
+    .text-content-ma {
+        max-width: 400px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+     /* all red container revel animation */
+
+
+
+
+
+
+
+
+ /* Style for the overall slider */
+ .slider-sp {
+    width: 100%; /* Control the overall width of the slider */
+    margin: 0 auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow to control visibility */
+}
+
+/* Slick list container */
+.slider-sp .slick-list {
+    overflow: visible; /* Allow slides to overflow */
+    padding: 0; /* Remove default padding */
+}
+
+/* Individual slide */
+.slider-sp .slick-slide img {
+    width: 100%; /* Ensure images take full slide width */
+    border-radius: 10px; /* Optional styling for rounder edges */
+}
+
+/* General slide styling */
+.slider-sp .slick-slide {
+    opacity: 0.8; /* Slightly lower opacity for non-focused slides */
+    transition: opacity 0.3s ease;
+    margin: 0 15px;
+}
+
+/* Style for center slide */
+.slider-sp .slick-center {
+    opacity: 1; /* Fully visible center slide */
+}
+
+
+
+/* --------------------------------- multi slider carausal with text ---------------- */
+/* --------------------------------- multi slider carausal with text ---------------- */
+
+
+
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* .text-content {
+    width: 50%;
+} */
+
+.image-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Custom arrow styling */
+.slick-prev, .slick-next {
+    position: absolute;
+    bottom: 10px; /* Place arrows at the bottom */
+    left: 20px;   /* Both arrows start from the bottom-left */
+    z-index: 10;
+    font-size: 24px;
+    color: black;
+    background: none;
+    border: none;
+    top: 110% !important;
+}
+
+
+
+.slick-next {
+    left: 60px; /* Position the right arrow slightly to the right of the left arrow */
+}
+
+/* Hide default arrows */
+.slick-prev:before, .slick-next:before {
+    content: none;
+}
+
+/* --------------------------------- multi slider carausal with text ---------------- */
+/* --------------------------------- multi slider carausal with text ---------------- */
+
+
+   /* Resize the arrow buttons */
+   .custom-prev-arrow, .custom-next-arrow {
+    background: none;
+    border: none;
+    font-size: 18px; /* Adjust the size of the icons here */
+    color: #333; /* Adjust the color as needed */
+    cursor: pointer;
+}
+
+/* Add some spacing around the arrows */
+.custom-prev-arrow {
+   margin-top: -60px;
+   margin-left: -20px;
+}
+
+.custom-next-arrow {
+    margin-top: -60px;
+    margin-left: 10px;
+}
+
+.custom-prev-arrow:focus, .custom-next-arrow:focus,
+.custom-prev-arrow:active, .custom-next-arrow:active {
+    color: #333; /* Ensure the arrow color remains consistent on click */
+}
+
+/* Ensure arrows are always visible */
+.custom-prev-arrow, .custom-next-arrow {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+/* Center the slide indicator between the arrows */
+.slide-indicator {
+    font-size: 13px; /* Adjust the size of the slide indicator text */
+    
+    color: #333; /* Adjust the color as needed */
+    margin-top: -11px;
+    margin-left: 35px !important;
+}
+
+
+
+
+.build-prev{
+    position: absolute;
+    top: 100px;
+    left: -70px;
+}
+
+.build-next{
+    position: absolute;
+    top: 100px;
+    left: -40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* model css */
+
+    /* Styling for the Expand modal */
+    .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: white; /* Black background with opacity */
+            opacity: 0.9;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 100px;
+            padding: 0; /* Remove padding */
+    border: none; /* Remove any borders */
+    box-shadow: none; /* Remove shadow if any */
+            
+        }
+
+        /* Image within modal */
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 100px;
+            right: 35px;
+            color: black;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Close button hover effect */
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+
+
+        .floor-container {
+            height: 200vh; /* To allow scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+           
+        }
+        .floorplan {
+            width: 100vw; /* Full viewport width */
+            max-width: 200px; /* Initial small size */
+            overflow: hidden;
+        }
+        
+
+
+
+/* Mobile responsiveness */
+/* General mobile adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0 !important;
+    }
+
+    .navbar {
+        padding: 15px; /* Add padding inside navbar */
+    }
+
+    .navbar-toggler {
+        margin-right: 0; /* Ensure the toggle button stays in view */
+    }
+
+    .nav-item {
+        width: 100%; /* Full width for each item */
+        text-align: center; /* Center align nav links */
+    }
+
+    .nav-link {
+        padding: 10px 0; /* Adjust padding for mobile links */
+    }
+
+    .navbar-collapse {
+        justify-content: center; /* Center align the collapsed menu */
+    }
+
+    /* Avoid overflow on small screens */
+    html, body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    /* If needed, you can force all content within a specific width */
+    .row {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .nav-tabs {
+    border-bottom: none; 
+   
+    position: absolute;
+    margin-left: 36rem;
+}
+
+}
+
+
+
+/* tab responsive code  */
+
+
+/* Make the tab navigation responsive */
+/* Make the tab navigation responsive */
+@media (max-width: 768px) {
+    #floorplanTabs {
+        display: flex;
+        flex-wrap: nowrap; /* Keep tabs horizontal */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        justify-content: center; /* Center the tab buttons */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .nav-item {
+        flex-grow: 1; /* Ensure each tab item takes up equal space */
+        text-align: center; /* Center the tab text */
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 8px 10px;
+        display: inline-block; /* Keep tabs inline */
+    }
+
+    /* Ensure the tab content images are centered */
+    .tab-content img {
+        display: block;
+        margin: 0 auto; /* Center the image */
+        width: 100%; /* Ensure images scale down to fit the screen */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Prevent the image from exceeding the width */
+    }
+
+    /* Adjust buttons */
+    .tab-content .btn {
+        width: 100%; /* Full width buttons for better UX on mobile */
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust the indicator image */
+    .image-floor {
+        display: block;
+        margin: 0 auto; /* Center the image */
+        width: 100%; /* Ensure indicator images take full width */
+        max-width: 100%; /* Prevent the image from exceeding the width */
+    }
+
+    /* Adjust text within tabs */
+    /* .tab-content h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .tab-content p {
+        font-size: 14px;
+        text-align: center;
+    } */
+}
+
+
+
+
+
+.image-floor{
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+.gsap-img-animation{
+
+    position: relative;
+}
+
+
+.gsap-img-animation .wrapper {
+            position: absolute;
+            top: 0;
+            width: 50vw; /* Use viewport width for responsiveness */
+            height: 100%;
+            background-color: white; /* Change color as needed */
+            z-index: 10;
+        }
+
+        .gsap-img-animation .left {
+            left: 0;
+            transform: translateX(0); /* Start at the left side */
+        }
+
+        .gsap-img-animation .right {
+            right: 0;
+            transform: translateX(0); /* Start at the right side */
+        }
+
+        .gsap-img-animation .ani-img {
+            display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    height: 100%;
+    z-index: 5;
+    opacity: 1;
+        }
+
+        /* Spacer for scrolling */
+        .gsap-img-animation .spacer {
+            height: 100vh; /* Spacer to make scrolling easier */
+        }
+
+        /* Content styles */
+        .gsap-img-animation .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(240, 240, 240, 0.9); /* Slightly transparent background for content */
+            margin-top: 50px; /* Space above content */
+        }
+
+        .gsap-img-animation h1 {
+            text-align: center;
+            margin: 20px 0; /* Reduced margin */
+        }
+
+        .gsap-img-animation p {
+            max-width: 800px; /* Limit paragraph width */
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .gsap-img-animation .content {
+                margin-top: 20px; /* Reduced margin for mobile devices */
+            }
+
+            .gsap-img-animation h1 {
+                font-size: 1.5em; /* Adjust heading size for smaller screens */
+            }
+        }
+
+
+        
+
+
+
+        
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/brettenham-house-logo-black.svg" alt="Normal Logo" class="fixed-top-image normal-image" id="normalLogo">
+        <img src="assets/images/brettenham-house-symbol-black.svg" alt="Fixed Logo" class="fixed-top-image fixed-image" id="fixedLogo">
+            </a>
+            <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link tcm" href="building.html">Building</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tcm" href="location.html">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tcm active" href="floorplans.html">Floorplans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tcm" href="downloads.html">Downloads</a>
+                    </li>
+                    <li class="nav-item tcm cta-contact">
+                        <a class=" btn btn-primary" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-spacer"></div>
+
+    <div class="container">
+        <div class="row ptd2 pbd6 pbm6">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="mask-container">
+                    <!-- Wrapper that contains the image with padding -->
+                    <div class="wrapper-buil bg-floorplan p-0 p-md-5">
+                        <!-- Red reveal div that is larger than the image container -->
+                        <div class="image-reveal-buil bg-floorplan"></div>
+                        <img src="assets/images/floorpan_first.jpg" alt="Hero Image" class="img-fluid d-none d-lg-block">
+                        <img src="assets/images/floorplans-image-mobile-1.png" alt="Location - Brettenham House" class="img-fluid d-lg-none">
+                    </div>
+                </div>
+                <!-- <img src="assets/images/floorplans-image-desktop-1.png" alt="Location - Brettenham House" class="img-fluid img-fluid d-none d-lg-block"> -->
+               
+            </div>
+            <div class="col-lg-1">
+                <!-- <h1 class="reveal">The Plans</h1> -->
+
+
+                <div class="reveal-wrapper">
+                    <div class="text-wrapper">
+                      <span class="text-revel">The Plans</span>
+                    </div>
+                  </div>
+
+                 
+
+
+                 
+
+               
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="bg-light-grey">
+        <div class="container py-5">
+            <p class="text-left" style="margin-left: 140px;">Select different office floors to calculate total SQ FT</p>
+        
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th class="level-head">LEVEL</th>
+                    <th class="level-head">OFFICE (SQ FT)</th>
+                    <th class="level-head">DUCHY</th>
+                    <th class="level-head">9 SAVOY STREET (SQ FT)</th>
+                    <th class="level-head">RETAIL (SQ FT)</th>
+                    <th class="level-head">TERRACE (SQ FT)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add rows similar to the image with clickable cells for sum calculation -->
+                <tr>
+                    <td class="level-column">9</td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,283</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,305</td>
+                </tr>
+                <tr>
+                    <td class="level-column">8</td>
+                    <td class="level-column data" onclick="toggleValue(this)">7,858</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column">538</td>
+                </tr>
+                <tr>
+                    <td class="level-column">7</td>
+                    <td class="level-column data" onclick="toggleValue(this)">9,623</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">538</td>
+                </tr>
+                <tr>
+                    <td class="level-column">6</td>
+                    <td class="level-column data" onclick="toggleValue(this)">12,088</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+                <tr>
+                    <td class="level-column">5</td>
+                    <td class="level-column data" onclick="toggleValue(this)">12,271</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">893</td>
+                </tr>
+                <tr>
+                    <td class="level-column">4</td>
+                    <td class="level-column data" onclick="toggleValue(this)">12,669</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">883</td>
+                </tr>
+                <tr>
+                    <td class="level-column">3</td>
+                    <td class="level-column data" onclick="toggleValue(this)">13,778</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+                <tr>
+                    <td class="level-column">2</td>
+                    <td class="level-column data" onclick="toggleValue(this)">13,993</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+                <tr>
+                    <td class="level-column">1</td>
+                    <td class="level-column data" onclick="toggleValue(this)">13,552</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+                <tr>
+                    <td class="level-column">DU</td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">1,905</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+                <tr>
+                    <td class="level-column">G</td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,068</td>
+                    <td class="level-column data" onclick="toggleValue(this)">1,432</td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,240</td>
+                    <td class="level-column"></td>
+                </tr>
+                <tr>
+                    <td class="level-column">LG</td>
+                    <td class="level-column data" onclick="toggleValue(this)">5,769*</td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">5,769</td>
+                    <td class="level-column data" onclick="toggleValue(this)">2,442</td>
+                    <td class="level-column data" onclick="toggleValue(this)">323</td>
+                </tr>
+                <tr>
+                    <td class="level-column">B1</td>
+                    <td class="level-column data" onclick="toggleValue(this)">4,015*</td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">4,015</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+
+                <tr>
+                    <td class="level-column">B2</td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,778*</td>
+                    <td class="level-column"></td>
+                    <td class="level-column data" onclick="toggleValue(this)">3,778</td>
+                    <td class="level-column"></td>
+                    <td class="level-column"></td>
+                </tr>
+                <!-- Add more rows as per the image -->
+            </tbody>
+            <tfoot>
+                <tr class="sum-row">
+                    <td class="level-column total-column" colspan="1" style="text-align: right"> <strong>TOTAL :</strong></td>
+                    <td class="level-column total-column" colspan="1" id="sumCell" style="background-color: #BDE2DF; border: 3px solid black;"></td>
+                    <td class="level-column total-column" colspan="1" id="sumCell">3,337</td>
+                    <td class="level-column total-column" colspan="1" id="sumCell">13,563</td>
+                    <td class="level-column total-column" colspan="1" id="sumCell">5,662</td>
+                    <td class="level-column total-column" colspan="1" id="sumCell">5,942</td>
+                    
+                </tr>
+            </tfoot>
+        </table>
+        <p class="text-left" style="margin-left: 140px;">*9 Savoy Street offices</p>
+        </div>
+    </section>
+
+    
+  
+   <div class="container">
+    <div class="row">
+        <div class="col-12">
+             <ul class="nav nav-tabs mt-15 justify-content-center" id="floorplanTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="level-B2-tab" data-toggle="tab" href="#level-B2" role="tab" aria-controls="level-B2" aria-selected="false">B2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-B1-tab" data-toggle="tab" href="#level-B1" role="tab" aria-controls="level-B1" aria-selected="false">B1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-LG-tab" data-toggle="tab" href="#level-LG" role="tab" aria-controls="level-LG" aria-selected="false">LG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-G-tab" data-toggle="tab" href="#level-G" role="tab" aria-controls="level-G" aria-selected="false">G</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-1-tab" data-toggle="tab" href="#level-1" role="tab" aria-controls="level-1" aria-selected="false">1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-2-tab" data-toggle="tab" href="#level-2" role="tab" aria-controls="level-2" aria-selected="false">2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-3-tab" data-toggle="tab" href="#level-3" role="tab" aria-controls="level-3" aria-selected="false">3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-4-tab" data-toggle="tab" href="#level-4" role="tab" aria-controls="level-4" aria-selected="false">4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-5-tab" data-toggle="tab" href="#level-5" role="tab" aria-controls="level-5" aria-selected="false">5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-6-tab" data-toggle="tab" href="#level-6" role="tab" aria-controls="level-6" aria-selected="false">6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-7-tab" data-toggle="tab" href="#level-7" role="tab" aria-controls="level-7" aria-selected="false">7</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-8-tab" data-toggle="tab" href="#level-8" role="tab" aria-controls="level-8" aria-selected="true">8</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="level-9-tab" data-toggle="tab" href="#level-9" role="tab" aria-controls="level-9" aria-selected="false">9</a>
+                </li>
+             
+            </ul>
+
+            <div class="tab-content mt-15" id="floorplanTabsContent">
+                <div class="tab-pane fade" id="level-B2" role="tabpanel" aria-labelledby="level-B2-tab">
+                    <h2>LEVEL B2</h2>
+                    <p>Office: 3,778 sq ft</p>
+                    
+                    <div class="mtm-6">
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                   
+                    <img src="assets/images/floorplans/basement-2.gif" alt="Floorplan Level 8" id="image-B1" class=" mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/basement-2-indicator.gif" alt="Floorplan Indicator"  class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-B2')">Expand</a>
+
+                           &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="level-B1" role="tabpanel" aria-labelledby="level-B1-tab">
+                   <div id="modalDescription" class="mtm-6">
+                    <h2>LEVEL B1</h2>
+                    <p>Office: 4,015 sq ft</p>
+                    <div class="mtm-6">
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                    <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                    
+                   </div>
+                   
+                    <img src="assets/images/floorplans/basement-1.gif" alt="Floorplan Level 7" class=" mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/basement-1-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-B1')">Expand</a>
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-LG" role="tabpanel" aria-labelledby="level-LG-tab">
+                    <h2>LEVEL LG</h2>
+                    <p>Office: 5,769 sq ft</p>
+                    <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                   <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                   
+                    <img src="assets/images/floorplans/lower-ground-floor.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/lower-ground-floor-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-LG')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-G" role="tabpanel" aria-labelledby="level-G-tab">
+                    <h2>LEVEL G</h2>
+                    <p>Office: 3,608 sq ft</p>
+
+                    <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                    
+                    <img src="assets/images/floorplans/ground-floor.gif" alt="Floorplan Level 6" class=" mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 mtm-6 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/ground-floor-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-G')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-1" role="tabpanel" aria-labelledby="level-1-tab">
+                    <h2>LEVEL 1</h2>
+                    <p>Office: 13,552 sq ft</p>
+
+                    <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                   
+                    <img src="assets/images/floorplans/level-1.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-1-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-1')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-2" role="tabpanel" aria-labelledby="level-2-tab">
+                    <h2>LEVEL 2</h2>
+                    <p>Office: 13,993 sq ft</p>
+
+                    <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                    <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                    
+                    <img src="assets/images/floorplans/level-2.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-2-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-2')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-3" role="tabpanel" aria-labelledby="level-3-tab">
+                    <h2>LEVEL 3</h2>
+                    <p>Office: 13,778 sq ft</p>
+
+                    <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                    
+                    <img src="assets/images/floorplans/level-3.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-3-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-3')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-4" role="tabpanel" aria-labelledby="level-4-tab">
+                    <h2>LEVEL 4</h2>
+                    <p>Office: 12,669 sq ft</p>
+
+                     <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+
+                    <img src="assets/images/floorplans/level-4.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-4-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-4')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-5" role="tabpanel" aria-labelledby="level-5-tab">
+                    <h2>LEVEL 5</h2>
+                    <p>Office: 12,271 sq ft</p>
+
+                      <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+
+                    <img src="assets/images/floorplans/level-5.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-5-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-5')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-6" role="tabpanel" aria-labelledby="level-6-tab">
+                    <h2>LEVEL 6</h2>
+                    <p>Office: 12,088 sq ft</p>
+
+                     <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                    <img src="assets/images/floorplans/level-6.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-6-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-6')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-7" role="tabpanel" aria-labelledby="level-7-tab">
+                    <h2>LEVEL 7</h2>
+                    <p>Office: 9,623 sq ft</p>
+                     <div>
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+                    <img src="assets/images/floorplans/level-7.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-7-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-7')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show active" id="level-8" role="tabpanel" aria-labelledby="level-8-tab">
+                    <h2>LEVEL 8</h2>
+                    <p>Office: 7,858 sq ft</p>
+                    <div>
+                        <span style="color: #8ec5c1;">■</span> Office<br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+
+                    <img src="assets/images/floorplans/level-8.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-8-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm mtm-6">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-8')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="level-9" role="tabpanel" aria-labelledby="level-9-tab">
+                    <h2>LEVEL 9</h2>
+                    <p>Office: 3,283 sq ft</p>
+                     <div class="mtm-6">
+                        <span style="color: #8ec5c1;">■</span> Office <br>
+                        <span style="color: #cce9e6;">■</span> Core
+                    </div>
+
+                    <img src="assets/images/floorplans/level-9.gif" alt="Floorplan Level 6" class="mtm-6 img-fluid floorplans-img">
+                    <div class="row mtm-6">
+                        <div class="col-lg-3 col-8 order-lg-3 ptd2 pbd3 pbm5 trd">
+                            <img src="assets/images/floorplans/level-9-indicator.gif" alt="Floorplan Indicator" class="img-fluid image-floor">
+                        </div>
+            
+                        <div class="col-lg-9 mtm-6 order-lg-2 ptd4 pbd3 pbm6 tcm">
+                            <a class="btn btn-secondary" onclick="expandTabContent('#level-9')">Expand</a> &nbsp;
+                            <a href="#" class="btn btn-secondary">Download</a>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+             
+           
+           
+    </div>
+</div>
+   </div>
+        
+   
+      <!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()"><img src="assets/images/close_btn.svg"></span>
+    <div id="modalContent" class="modal-content">
+        <!-- Entire tab content will go here -->
+    </div>
+</div>
+
+
+<div class="container gsap-img-animation">
+    <div class="row">
+        <div class="wrapper left"></div>
+    <div class="wrapper right"></div>
+    
+    <img src="assets/images/floorplans/floorplans-img.jpg" alt="Your Image" class="image-fluid ani-img d-none d-lg-block">
+    <img src="assets/images/floorplans/floorplans-mob-img.jpg" alt="Your Image" class="image-fluid ani-img d-block d-lg-none">
+
+    <div class="spacer"></div> <!-- Spacer for scrolling -->
+
+  
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="floorplan text-center">
+                <img src="assets/images/ci-home-3.jpg" alt="Animated Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+   
+
+    <div class="container">
+        <div class="row ptd6 ptm6 pbd6 pbm6">
+
+            <div class="col-lg-10 offset-lg-1 pbd2 pbm4">
+
+                <h3 class="pbd1 pbm2">SPECIFICATIONS</h3>
+
+                <!-- START ACCORDION -->
+                <div class="accordion" id="accordionExample">
+
+                    <div class="accordion-item accordion-top">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                OFFICE SPACES
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+
+                            <div class="row pbd1 pbm2">
+                                <div class="col-lg-10">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien nibh, rutrum id risus quis, tristique ultricies elit. Quisque bibendum quis massa vitae consequat. Sed quis bibendum dolor. Quisque turpis magna, cursus quis neque id, porta interdum orci. Aliquam id felis condimentum erat consectetur volutpat. Nunc arcu nibh, aliquam vitae risus a, fermentum placerat lacus. Nunc rutrum suscipit posuere. Fusce elementum luctus tellus, nec tincidunt est aliquam&nbsp;non.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                AMENITIES
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+
+                            <div class="row ptd1 ptm1 pbd1 pbm2">
+                                <div class="col-lg-6">
+                                    <p>- 310 cycle storage spaces<br>
+                                        -   324 lockers split over two changing rooms<br>
+                                        -   Bike repair and washdown stations</p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>- 24 showers equally split over two changing rooms<br>
+                                        - Extensive collaboration and casual working amenity areas</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                SUSTAINABILITY TARGETS
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+
+                            <div class="row pbd1 pbm2">
+                                <div class="col-lg-10">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien nibh, rutrum id risus quis, tristique ultricies elit. Quisque bibendum quis massa vitae consequat. Sed quis bibendum dolor. Quisque turpis magna, cursus quis neque id, porta interdum orci. Aliquam id felis condimentum erat consectetur volutpat. Nunc arcu nibh, aliquam vitae risus a, fermentum placerat lacus. Nunc rutrum suscipit posuere. Fusce elementum luctus tellus, nec tincidunt est aliquam&nbsp;non.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                CONNECTIVITY
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+
+                            <div class="row pbd1 pbm2">
+                                <div class="col-lg-10">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien nibh, rutrum id risus quis, tristique ultricies elit. Quisque bibendum quis massa vitae consequat. Sed quis bibendum dolor. Quisque turpis magna, cursus quis neque id, porta interdum orci. Aliquam id felis condimentum erat consectetur volutpat. Nunc arcu nibh, aliquam vitae risus a, fermentum placerat lacus. Nunc rutrum suscipit posuere. Fusce elementum luctus tellus, nec tincidunt est aliquam&nbsp;non.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                LIFTS
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+
+                            <div class="row pbd1 pbm2">
+                                <div class="col-lg-10">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien nibh, rutrum id risus quis, tristique ultricies elit. Quisque bibendum quis massa vitae consequat. Sed quis bibendum dolor. Quisque turpis magna, cursus quis neque id, porta interdum orci. Aliquam id felis condimentum erat consectetur volutpat. Nunc arcu nibh, aliquam vitae risus a, fermentum placerat lacus. Nunc rutrum suscipit posuere. Fusce elementum luctus tellus, nec tincidunt est aliquam&nbsp;non.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END ACCORDION -->
+
+            </div>
+
+        </div>
+    </div>
+
+ 
+    <footer>
+        <div class="container">
+            <div class="row ptd4 ptm3 pbd3 pbm4">
+                <div class="col-xl-3 col-lg-12 pbd3 ptm2 pbm2">
+                    <p class="text-white">A development by</p>
+                    <a href="https://www.helical.co.uk/" target="_blank">
+                        <img src="assets/images/ftr-logo-helical.svg" alt="Helical" width="277">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-xl-1 offset-xl-2 ptm6 pbm3">
+                    <a href="https://www.savills.co.uk/" target="_blank">
+                        <img src="assets/images/ftr-logo-savills.svg" alt="Savills" width="70">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <p>
+                        Peter Thursfield<br>
+                        <a href="mailto:pthursfield@savills.com">pthursfield@savills.com</a><br>
+                        <a href="tel:07870555732">07870 555732</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <p>
+                        Hunter Booth<br>
+                        <a href="mailto:hunter.booth@savills.com">hunter.booth@savills.com</a><br>
+                        <a href="tel:07710965693">07710 965693</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <p>
+                        Freddie Corlett<br>
+                        <a href="mailto:fcorlett@savills.com">fcorlett@savills.com</a><br>
+                        <a href="tel:07870555842">07870 555842</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row pbd3 pbm4">
+
+                <div class="col-lg-2 col-xl-1 offset-xl-5 pbm3">
+                    <a href="https://rx.london/" target="_blank">
+                        <img src="assets/images/ftr-logo-rx.svg" alt="RX London" width="70">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <p>
+                        Dan Burn<br>
+                        <a href="mailto:dan.burn@rx.london">dan.burn@rx.london</a><br>
+                        <a href="tel:07515607011">07515 607011</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <p>
+                        Sophie Bartlett<br>
+                        <a href="mailto:sophie.bartlett@rx.london">sophie.bartlett@rx.london</a><br>
+                        <a href="tel:07802338295">07802 338295</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-xl-2">
+                    <p>Alfie John<br>
+                        <a href="mailto:alfie.john@rx.london">alfie.john@rx.london</a><br>
+                        <a href="tel:07377885814">07377 885814</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row pbd2 pbm4">
+                <div class="col-xl-12">
+                    <hr>
+                </div>
+                <div class="col-xl-10 ptd1 ptm2">
+                    <p>2-19 Lancaster Pl<br>London WC2</p>
+                </div>
+                <div class="col-xl-2 ptd1 ptm2">
+                    <p><a href="cookies.html">Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+     <!-- GSAP CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+     
+
+     <script src="assets/js/jquery-3.5.1.min.js"></script>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        // GSAP Animation
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".floorplan", {
+            maxWidth: "100%", // Grow container to full width of viewport
+            scrollTrigger: {
+                trigger: ".floorplan",
+                start: "top 80%", // Start animation earlier
+                end: "top 20%",   // End animation to make the full image visible
+                scrub: true,      // Smooth scroll effect
+            }
+        });
+    </script>
+  
+
+  <script>
+    // Register the ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    const leftWrapper = document.querySelector('.left');
+    const rightWrapper = document.querySelector('.right');
+    const image = document.querySelector('.image');
+
+    // Create a ScrollTrigger to slide the wrappers and reveal the image
+    gsap.to(leftWrapper, {
+        x: '-100%', // Move the left wrapper to the left
+        duration: 0.5, // Shortened duration
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: '.spacer', // Use spacer as the trigger
+            start: 'top bottom', // When the spacer hits the top of the viewport
+            end: 'bottom top', // When the spacer leaves the top of the viewport
+            scrub: true, // Smoothly scrub through the animation
+            marker:true
+        }
+    });
+
+    gsap.to(rightWrapper, {
+        x: '100%', // Move the right wrapper to the right
+        duration: 0.5, // Shortened duration
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: '.spacer', // Use spacer as the trigger
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+        }
+    });
+</script>
+
+
+ <script>
+    // Function to expand the entire tab content in a modal
+function expandTabContent(tabId) {
+    // Get the entire content of the tab
+    const tabContent = document.querySelector(tabId).innerHTML;
+
+    // Set the modal content to be the same as the tab content
+    document.getElementById("modalContent").innerHTML = tabContent;
+
+    // Show the modal
+    document.getElementById("myModal").style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+ </script>
+    <script>
+        let totalSum = 0;
+        let currentColumn = null; // Variable to track the current column being summed
+    
+        // Function to toggle the value of the clicked cell between adding and subtracting
+        function toggleValue(cell) {
+            const columnIndex = cell.cellIndex; // Get the index of the clicked column
+    
+            // If this is the first click, or the clicked column is the same as the current column
+            if (currentColumn === null || currentColumn === columnIndex) {
+                currentColumn = columnIndex; // Set the current column
+                
+                let cellValue = parseFloat(cell.textContent.replace(/,/g, '')); // Remove commas and convert to number
+    
+                // Check if the cell has been clicked previously (toggle on/off)
+                if (cell.classList.contains('clicked')) {
+                    // If cell is already clicked, subtract its value from the total
+                    totalSum -= cellValue;
+                    cell.classList.remove('clicked'); // Remove the clicked class to indicate deselection
+                } else {
+                    // If cell is not clicked, add its value to the total
+                    totalSum += cellValue;
+                    cell.classList.add('clicked'); // Add the clicked class to indicate selection
+                }
+    
+                // Update the sum display
+                document.getElementById('sumCell').textContent = totalSum.toLocaleString();
+            } else {
+                // If a different column is clicked, reset the sum and clear any clicked cells
+                resetTable();
+                currentColumn = columnIndex; // Set the new current column
+                toggleValue(cell); // Re-trigger the function for the new column
+            }
+        }
+    
+        // Function to reset the table (clear clicked cells and reset total)
+        function resetTable() {
+            const clickedCells = document.querySelectorAll('.clicked');
+            clickedCells.forEach(cell => cell.classList.remove('clicked')); // Remove the clicked class from all cells
+            totalSum = 0; // Reset the sum
+            document.getElementById('sumCell').textContent = totalSum.toLocaleString(); // Reset the display
+        }
+    </script>
+    
+    
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+
+<script>
+
+    // This code use for hide and show the top header //
+
+$(window).on('scroll', function() {
+if ($(this).scrollTop() > 50) {
+   $('#normalLogo').hide();
+   $('#fixedLogo').show();
+} else {
+   $('#normalLogo').show();
+   $('#fixedLogo').hide();
+}
+});
+
+// This code use for hide and show the top header //
+
+
+</script>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider-connectivity').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                ],
+                autoplaySpeed: 5000,
+                cssEase:"cubic-bezier(0.2, 0.4, 0.4, 0.9)",
+                swipeToSlide: true,
+                accessibility: true
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.slider-2').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                autoplay: true,
+                arrows: true,
+                autoplaySpeed: 5000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                initialSlide: 1,
+                cssEase:"cubic-bezier(0.2, 0.4, 0.4, 0.9)",
+                swipeToSlide: true,
+                accessibility: true
+            });
+        });
+    </script>
+
+</body>
+</html>
